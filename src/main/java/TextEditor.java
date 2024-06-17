@@ -26,8 +26,9 @@ public class TextEditor {
     public void setText(String text) {
          texts.add(text);
          this.text=text;
+         saveStateMemento();
     }
-    public Memento saveStateMemento(){
+    private Memento saveStateMemento(){
         Memento memento =new Memento(text);
         history.saveHistoryMamento(memento);
         return memento;
