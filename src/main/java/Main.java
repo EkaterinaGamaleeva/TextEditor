@@ -1,19 +1,15 @@
 public class Main {
     public static void main(String[] args) {
         TextEditor textEditor=new TextEditor();
-
-        textEditor.setText("bomva");
-
+        textEditor.append("bomva");
         textEditor.toStringText();
-        textEditor.setText("vdrdfc");
-
+        textEditor.append("vdrdfc");
         textEditor.undo();
         textEditor.toStringText();
-        textEditor.setText("ergdrg");
-
+        textEditor.append("ergdrg");
         textEditor.undo();
         textEditor.toStringText();
-        textEditor.setText("g");
+        textEditor.append("g");
         textEditor.undo();
         textEditor.toStringText();
 

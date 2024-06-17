@@ -23,7 +23,7 @@ public class TextEditor {
         return texts.stream().toList();
     }
 
-    public void setText(String text) {
+    public void append(String text) {
          texts.add(text);
          this.text=text;
          saveStateMemento();
