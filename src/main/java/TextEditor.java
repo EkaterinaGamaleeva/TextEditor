@@ -10,12 +10,6 @@ public class TextEditor {
 
     }
 
-    @Override
-    public String toString() {
-        return "TextEditor{" +
-                "text='" + text + '\'' +
-                '}';
-    }
 
     public String getText() {
         return text ;
@@ -25,13 +19,19 @@ public class TextEditor {
          this.text=text;
          saveStateMemento();
     }
-    private Memento saveStateMemento(){
+    public Memento saveStateMemento(){
         Memento memento =new Memento(text);
         history.saveHistoryMamento(memento);
         return memento;
     }
     public void undo(){
-        text = history.getMementoSaveNewMomento().getText();
-    }
 
+        text = history.getMementoSaveNewMomento();
+    }
+    @Override
+    public String toString() {
+        return "TextEditor{" +
+                "text='" + text + '\'' +
+                '}';
+    }
 }
